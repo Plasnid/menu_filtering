@@ -30,6 +30,7 @@ foreach ($dbo->query($query) as $row) {
     //var_dump($row_info);
     array_push($menu_output, $row_info);    
 };
+header('Content-type: application/json');
 $json = json_encode($menu_output);
 echo($json);
 
